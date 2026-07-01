@@ -10,11 +10,10 @@ clientes e locações) com foco em **Programação Orientada a Objetos**.
 
 | Nome | Matrícula |
 |------|-----------|
-| _preencher_ | _preencher_ |
-| _preencher_ | _preencher_ |
-| _preencher_ | _preencher_ |
+| Davi Felipe Pinheiro | 20240001420 |
+| Enzo Araújo | 20250063249 |
 
-Repositório: _colar o link do GitHub aqui_
+Repositório: https://github.com/enzoustk/proj-lp1
 
 ## Como executar
 
