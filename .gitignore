@@ -1,0 +1,17 @@
+# Dados gerados em runtime (mantém o data/.gitkeep)
+data/*.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Ferramentas / IDE / SO
+.omc/
+.claude/
+.vscode/
+.idea/
+.DS_Store
+*.log

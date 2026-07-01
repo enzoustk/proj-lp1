@@ -1,0 +1,126 @@
+@startuml Locadora de Veículos
+' Renderize em https://www.plantuml.com/plantuml ou com a extensão PlantUML.
+
+abstract class Veiculo {
+    +placa : str
+    +marca : str
+    +modelo : str
+    +ano : int
+    +valor_diaria_base : float
+    +disponivel : bool
+    +{abstract} tipo() : str
+    +{abstract} calcular_valor_diaria(dias) : float
+}
+class Carro {
+    +numero_portas : int
+    +ar_condicionado : bool
+}
+class Moto {
+    +cilindrada : int
+}
+class Caminhao {
+    +capacidade_carga_ton : float
+    +eixos : int
+}
+Veiculo <|-- Carro
+Veiculo <|-- Moto
+Veiculo <|-- Caminhao
+
+abstract class Cliente {
+    +id_cliente : int
+    +nome : str
+    +telefone : str
+    +qtd_locacoes : int
+    +{abstract} documento() : str
+    +{abstract} validar_documento()
+    +{abstract} calcular_desconto(valor) : float
+}
+class ClientePF {
+    +cpf : str
+    +data_nascimento : str
+}
+class ClientePJ {
+    +cnpj : str
+    +razao_social : str
+}
+Cliente <|-- ClientePF
+Cliente <|-- ClientePJ
+
+class Locacao {
+    +id_locacao : int
+    +data_inicio : date
+    +data_prevista_devolucao : date
+    +data_real_devolucao : date
+    +status : StatusLocacao
+    +valor_total : float
+    +multa : float
+    +pagar(forma)
+    +retirar()
+    +finalizar(data) : float
+    +cancelar()
+}
+class Pagamento {
+    +valor : float
+    +forma : FormaPagamento
+    +pago : bool
+    +confirmar()
+}
+enum StatusLocacao {
+    RESERVADA
+    PAGA
+    ATIVA
+    FINALIZADA
+    CANCELADA
+}
+enum FormaPagamento {
+    DINHEIRO
+    CARTAO
+    PIX
+}
+
+class Locadora {
+    +nome : str
+    +cadastrar_veiculo(v)
+    +cadastrar_cliente(c)
+    +criar_locacao(placa, id, inicio, dias) : Locacao
+    +pagar_locacao(id, forma)
+    +retirar_veiculo(id)
+    +devolver_veiculo(id, data) : float
+    +cancelar_locacao(id)
+    +faturamento() : float
+}
+class Repositorio {
+    +salvar(locadora)
+    +carregar() : Locadora
+}
+class Aplicacao {
+    +run()
+}
+class Console {
+    +__lshift__(obj) : Console
+    +__rshift__(obj) : Console
+}
+
+Locacao "0..*" --> "1" Veiculo : aluga
+Locacao "0..*" --> "1" Cliente : feita por
+Locacao "1" *-- "0..1" Pagamento
+Locacao ..> StatusLocacao
+Pagamento ..> FormaPagamento
+
+Locadora "1" o-- "0..*" Veiculo
+Locadora "1" o-- "0..*" Cliente
+Locadora "1" o-- "0..*" Locacao
+
+Aplicacao "1" --> "1" Locadora
+Aplicacao "1" --> "1" Repositorio
+Aplicacao ..> Console
+Repositorio ..> Locadora
+
+exception LocadoraError
+LocadoraError <|-- DadosInvalidosError
+LocadoraError <|-- DocumentoInvalidoError
+LocadoraError <|-- VeiculoIndisponivelError
+LocadoraError <|-- TransicaoInvalidaError
+LocadoraError <|-- EntidadeNaoEncontradaError
+
+@enduml

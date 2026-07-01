@@ -1,0 +1,16 @@
+ATIVIDADE UNIDADE 03 - LOCADORA DE VEÍCULOS
+Linguagem de Programação 1 (LP1) - UFRN
+
+Integrantes:
+  - Nome: ____________________________  Matrícula: ___________
+  - Nome: ____________________________  Matrícula: ___________
+  - Nome: ____________________________  Matrícula: ___________
+
+Link do repositório (GitHub):
+  ____________________________________________________________
+
+Instruções para rodar a aplicação:
+  Requer Python 3.8+ (sem dependências externas).
+  - Executar:  make run     (ou: python3 main.py)
+  - Testes:    make test
+  As instruções completas estão no README.md do repositório.
