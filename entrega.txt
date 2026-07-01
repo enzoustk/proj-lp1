@@ -2,12 +2,11 @@ ATIVIDADE UNIDADE 03 - LOCADORA DE VEÍCULOS
 Linguagem de Programação 1 (LP1) - UFRN
 
 Integrantes:
-  - Nome: ____________________________  Matrícula: ___________
-  - Nome: ____________________________  Matrícula: ___________
-  - Nome: ____________________________  Matrícula: ___________
+  - Nome: Davi Felipe Pinheiro           Matrícula: 20240001420
+  - Nome: Enzo Araújo                     Matrícula: 20250063249
 
 Link do repositório (GitHub):
-  ____________________________________________________________
+  https://github.com/enzoustk/proj-lp1
 
 Instruções para rodar a aplicação:
   Requer Python 3.8+ (sem dependências externas).

@@ -37,8 +37,6 @@ make demo       # executa o roteiro automaticamente (saída no terminal)
 ### Apresentação
 
 - `docs/APRESENTACAO.md` — slides (fonte Marp; também legível como markdown).
-- `docs/APRESENTACAO.pdf` / `.pptx` / `.html` — slides **renderizados** prontos
-  para apresentar (o `.pptx` abre no PowerPoint/Google Slides para editar).
 - `docs/ROTEIRO_DEMO.md` — passo a passo da demo ao vivo, com as falas.
 - `scripts/demo_inputs.txt` — sequência de teclas usada pelo `make smoke`/`demo`.
 
