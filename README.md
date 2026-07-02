@@ -1,19 +1,10 @@
 # Locadora de Veículos
 
-Trabalho da **Unidade 03** de Linguagem de Programação 1 (LP1) — UFRN.
+Trabalho da **Unidade 03** de Linguagem de Programação I (IMD0030) — UFRN.
 Aplicação de console que gerencia uma locadora de veículos (CRUD de veículos,
 clientes e locações) com foco em **Programação Orientada a Objetos**.
 
 > Linguagem: **Python 3** (somente biblioteca padrão, sem dependências externas).
-
-## Integrantes
-
-| Nome | Matrícula |
-|------|-----------|
-| Davi Felipe Pinheiro | 20240001420 |
-| Enzo Araújo | 20250063249 |
-
-Repositório: https://github.com/enzoustk/proj-lp1
 
 ## Como executar
 
@@ -112,3 +103,10 @@ proj-lp1/
 
 Cada subclasse tem atributos **e** comportamento próprios, conforme as
 Observações 2 e 3 do enunciado.
+
+## Componentes
+
+| Nome | Matrícula |
+|------|-----------|
+| Davi Felipe de Macedo Pinheiro | 20240001420 |
+| Enzo Araújo de Souza e Oliveira | 20250063249 |
